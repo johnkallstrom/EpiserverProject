@@ -1,0 +1,14 @@
+﻿@using EpiserverProject.ViewModels
+
+@model EpiserverStartPageViewModel
+
+<div class="jumbotron jumbotron-fluid bg-dark">
+    <div class="container text-center text-white">
+        <h1>@Html.PropertyFor(x => x.CurrentPage.Header)</h1>
+        @Html.PropertyFor(x => x.CurrentPage.Body)
+    </div>
+</div>
+
+<div class="container">
+    @Html.PropertyFor(x => x.CurrentPage.ContentArea)
+</div>

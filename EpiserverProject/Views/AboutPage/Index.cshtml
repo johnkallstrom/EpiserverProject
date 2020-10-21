@@ -1,0 +1,33 @@
+﻿@using EpiserverProject.ViewModels
+
+@model AboutPageViewModel
+
+<div class="jumbotron jumbotron-fluid bg-dark">
+    <div class="container text-center text-white">
+        <h1>@Model.CurrentPage.Header</h1>
+        <p>@Model.CurrentPage.SubHeader</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            @Html.PropertyFor(x => x.CurrentPage.Body)
+        </div>
+        <div class="col-lg-6">
+            <img class="img-fluid rounded pt-2" src="@Url.ContentUrl(Model.CurrentPage.Image)" alt="about-page-image" />
+        </div>
+    </div>
+    <hr />
+    <div class="mt-2">
+        <h3 class="pb-2">Feel free to rate our website!</h3>
+        <button class="btn btn-primary rating" data-rating="1">1</button>
+        <button class="btn btn-primary rating" data-rating="2">2</button>
+        <button class="btn btn-primary rating" data-rating="3">3</button>
+        <button class="btn btn-primary rating" data-rating="4">4</button>
+        <button class="btn btn-primary rating" data-rating="5">5</button>
+    </div>
+    <div class="rating-submitted mt-3">
+        <p class="font-italic text-success success-text">Thanks for your feedback.</p>
+    </div>
+</div>

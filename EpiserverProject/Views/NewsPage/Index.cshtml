@@ -1,0 +1,20 @@
+﻿@using EpiserverProject.ViewModels
+
+@model NewsPageViewModel
+
+<div class="container mt-3">
+    <p class="font-weight-bold text-uppercase text-primary">@Html.PropertyFor(x => x.CurrentPage.Topic)</p>
+    <h1 class="text-center">@Html.PropertyFor(x => x.CurrentPage.Header)</h1>
+    <p class="text-center pb-2 font-weight-bold">@Html.PropertyFor(x => x.CurrentPage.Published, new { Tag = "ShortDate" })</p>
+    <p class="text-center font-italic">@Html.PropertyFor(x => x.CurrentPage.Lead)</p>
+    <img class="img-fluid py-4" src="@Url.ContentUrl(Model.CurrentPage.Image)" alt="news-article-image" />
+    @Html.PropertyFor(x => x.CurrentPage.Text)
+    <blockquote class="blockquote">
+        <footer class="blockquote-footer">
+            By
+            <cite>
+                @Html.PropertyFor(x => x.CurrentPage.Author)
+            </cite>
+        </footer>
+    </blockquote>
+</div>

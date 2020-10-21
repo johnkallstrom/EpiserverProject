@@ -1,0 +1,54 @@
+﻿.root {
+    --orange-color: #fd7e14;
+}
+
+.container p {
+    margin-bottom: 0;
+}
+
+#news a {
+    color: #212529;
+}
+
+#news a:hover {
+    text-decoration: none;
+}
+
+.jumbotron {
+    margin-bottom: 2rem;
+}
+
+.card {
+    margin-top: 1rem;
+}
+
+.navbar {
+    border-bottom: 3px solid #007bff;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 2rem 2rem;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+.blockquote {
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+
+.blockquote footer {
+    margin-top: 0;
+    padding: 0;
+}
+
+hr {
+    border-top: 3px solid #f4f4f4;
+}
+
+.success-text:hover {
+    cursor: pointer;
+}

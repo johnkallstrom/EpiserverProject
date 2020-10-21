@@ -1,0 +1,25 @@
+﻿@using EpiserverProject.ViewModels
+
+@model NewsViewModel
+
+@foreach (var news in Model.News)
+{
+    <div id="news">
+        <a href="@Url.ContentUrl(news.ContentLink)">
+            <div class="card">
+                <div class="card-body pt-2">
+                    <p class="font-weight-bold text-uppercase text-primary pb-2">@news.Topic</p>
+                    <img class="card-img-top pb-2" src="@Url.ContentUrl(news.Image)" alt="news-article-image" />
+                    <h3 class="card-title mb-0 py-3">@news.Header</h3>
+                    @Html.Raw(news.Lead)
+                    <blockquote class="blockquote">
+                        <footer class="blockquote-footer">
+                            By
+                            <cite>@news.Author</cite>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </a>
+    </div>
+}
