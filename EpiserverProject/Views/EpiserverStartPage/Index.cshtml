@@ -10,5 +10,7 @@
 </div>
 
 <div class="container">
-    @Html.PropertyFor(x => x.CurrentPage.ContentArea)
+    <div class="row">
+        @Html.PropertyFor(x => x.CurrentPage.ContentArea, new { HasContainer = false })
+    </div>
 </div>

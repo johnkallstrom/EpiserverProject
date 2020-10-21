@@ -6,6 +6,14 @@
     margin-bottom: 0;
 }
 
+#rss a {
+    color: #212529;
+}
+
+#rss a:hover {
+    text-decoration: none;
+}
+
 #news a {
     color: #212529;
 }
@@ -15,7 +23,7 @@
 }
 
 .jumbotron {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .card {

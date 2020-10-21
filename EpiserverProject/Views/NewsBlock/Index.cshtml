@@ -2,9 +2,10 @@
 
 @model NewsViewModel
 
-@foreach (var news in Model.News)
-{
-    <div id="news">
+<div id="news">
+    <h3>Latest</h3>
+    @foreach (var news in Model.News)
+    {
         <a href="@Url.ContentUrl(news.ContentLink)">
             <div class="card">
                 <div class="card-body pt-2">
@@ -21,5 +22,5 @@
                 </div>
             </div>
         </a>
-    </div>
-}
+    }
+</div>

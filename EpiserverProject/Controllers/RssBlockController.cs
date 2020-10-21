@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using EPiServer.Web.Mvc;
 using EpiserverProject.Models.Blocks;
 using EpiserverProject.Services;
@@ -19,10 +20,10 @@ namespace EpiserverProject.Controllers
         {
             var model = new RssViewModel
             {
-                Feed = _rssFeedService.ReadFeed("")
-            }
+                Feed = _rssFeedService.ReadFeed("http://feeds.bbci.co.uk/news/rss.xml").ToList()
+            };
 
-            return PartialView(currentBlock);
+            return PartialView(model);
         }
     }
 }

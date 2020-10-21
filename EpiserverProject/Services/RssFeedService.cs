@@ -40,7 +40,7 @@ namespace EpiserverProject.Services
                 Log.Error(ex.Message);
             }
 
-            return rssFeedData;
+            return rssFeedData.Take(10);
         }
 
         public async Task<IEnumerable<RssFeed>> ReadFeedAsync(string url)
@@ -69,7 +69,7 @@ namespace EpiserverProject.Services
                 Log.Error(ex.Message);
             }
 
-            return rssFeedData;
+            return rssFeedData.Take(10);
         }
     }
 }

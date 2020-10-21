@@ -1,0 +1,23 @@
+﻿@using EpiserverProject.ViewModels
+
+@model RssViewModel
+
+<div id="rss">
+    <h3>Feed</h3>
+    @foreach (var item in Model.Feed)
+    {
+        <a href="@item.Link" target="_blank">
+            <div class="card">
+                <div class="card-body">
+                    <p class="font-weight-bold pb-2 text-primary">@item.PubDate</p>
+                    <h5 class="card-title">@item.Title</h5>
+                    <p>@Html.Raw(item.Description)</p>
+                </div>
+            </div>
+        </a>
+    }
+
+    <div class="py-4 text-center">
+        <button class="btn btn-primary btn-lg">Load</button>
+    </div>
+</div>

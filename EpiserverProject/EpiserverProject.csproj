@@ -317,6 +317,7 @@
     <Content Include="Views\NewsBlock\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\ShortDate.cshtml" />
     <Content Include="Views\AboutPage\Index.cshtml" />
+    <Content Include="Views\RssBlock\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
